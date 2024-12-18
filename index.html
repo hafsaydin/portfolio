@@ -6,27 +6,40 @@
     <title>Mein Portfolio</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ+KXn7omD/YV7kE+qI2z2+1c8s1jzVYswlYQ5mcj+j1VfndHiQ4D05xPYil" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css"> <!-- Dein eigenes CSS -->
+    <link rel="stylesheet" href="styles.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-    <!-- Sticky Header -->
     <header class="bg-dark text-white sticky-top">
-        <div class="container-fluid">
+        
+        <div class="container">
             <div class="row">
-                <div class="col-12 text-center py-4">
-                    <h1>Hafsa Aydin</h1>
+                <!-- Logo -->
+                <div class="col">
+                    <img src="images/logo.png" alt="Logo" class="logo">
+                </div>
+    
+                <!-- Header Text -->
+                <div class="col">
                     <p>Webentwickler – Webseiten mit Fokus auf Benutzerfreundlichkeit und Sicherheit</p>
+                </div>
+    
+                <!-- Navigation -->
+                <div class="col">
                     <nav>
-                        <ul class="nav justify-content-center">
+                        <ul class="nav justify-content-end">
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#about">Über mich</a>
+                                <a class="nav-link text-white" href="#about">ÜBER MICH</a>
                             </li>
+                            <li class="nav-item">|</li> <!-- Trennzeichen -->
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#portfolio">Portfolio</a>
+                                <a class="nav-link text-white" href="#projekte">MEINE PROJEKTE</a>
                             </li>
+                            <li class="nav-item">|</li> <!-- Trennzeichen -->
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#contact">Kontakt</a>
+                                <a class="nav-link text-white" href="#contact">KONTAKT</a>
                             </li>
                         </ul>
                     </nav>
@@ -34,83 +47,100 @@
             </div>
         </div>
     </header>
+        
+    
 
-    <!-- Über mich Sektion -->
-    <section id="about" class="container py-5">
-        <h2 class="text-center mb-4">Über mich</h2>
-        <p class="text-center">Ich bin Hafsa Aydin, eine Webentwicklerin mit einem starken Fokus auf Nutzerfreundlichkeit, Sicherheit und modernes Design. Mit einem Bachelorabschluss in Medieninformatik und viel Erfahrung in der Umsetzung komplexer Webprojekte, freue ich mich, meine Fähigkeiten in jedem neuen Projekt einzubringen.</p>
-    </section>
+    <div class="section-titles">
 
-    <!-- Projekte Sektion -->
-    <section id="portfolio" class="container py-5">
-        <h2 class="text-center mb-4">Projekte</h2>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-            <!-- Projekt 1 -->
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Projekt 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Internet-Sicherheit</h5>
-                        <p class="card-text">Bachelorarbeit: Prototypische Umsetzung und Redesign eines Webauftrittes für ein Forschungsinstitut der Westfälischen Hochschule für Internet-Sicherheit. Fokus auf WordPress und Sicherheit.</p>
-                        <a href="https://internet-sicherheit.de/" class="btn btn-primary" target="_blank">Zur Webseite</a>
-                    </div>
+        <!-- Über mich Sektion -->
+        <section id="about" class="container py-5">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2>Hi, ich bin Hafsa!</h2>
+                    <p>Ich bin eine Webentwicklerin mit einem starken Fokus auf Nutzerfreundlichkeit, Sicherheit und modernes Design. Mit einem Bachelorabschluss in Medieninformatik und viel Erfahrung in der Umsetzung komplexer Webprojekte, freue ich mich, meine Fähigkeiten in jedem neuen Projekt einzubringen.</p>
+                </div>
+                <div class="about-image">
+                    <img src="images/ich.jpg" alt="Mein Bild">
                 </div>
             </div>
+        </section>
+
+        <!-- Projekte Sektion -->
+        <section id="projekte" class="container py-5">
+            <h2 class="text-center mb-4">Meine Projekte</h2>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <!-- Projekt 1 -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/internet-sicherheit.png" class="card-img-top img-fluid" alt="Internet-Sicherheit">
+                        <div class="card-body">
+                            <h5 class="card-title">Internet-Sicherheit</h5>
+                            <p class="card-text">Diese Website wurde für ein Forschungsinstitut der Westfälischen Hochschule für Internet-Sicherheit entwickelt und prototypisch umgesetzt. Ziel war es, eine moderne Plattform zu schaffen, die sowohl aktuelle Forschungsergebnisse als auch relevante Sicherheitslösungen übersichtlich präsentiert. Der Fokus lag dabei auf einem klaren Design, das die Expertise des Instituts unterstreicht, sowie einer sicheren und benutzerfreundlichen WordPress-Implementierung.</p>
+                            <a href="https://internet-sicherheit.de/" class="btn btn-primary" target="_blank">Zur Webseite</a>
+                        </div>
+                    </div>
+                </div>
             <!-- Projekt 2 -->
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Projekt 2">
-                    <div class="card-body">
-                        <h5 class="card-title">ATA Tech</h5>
-                        <p class="card-text">Erstellung einer Website für einen Kunden im Bereich Handyverkauf und -reparatur. Inkl. Produktpräsentation und Kontaktformular für Dienstleistungen.</p>
-                        <a href="https://ata-tech.de/" class="btn btn-primary" target="_blank">Zur Webseite</a>
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/ata-tech.png" class="card-img-top img-fluid" alt="ATA Tech">
+                        <div class="card-body">
+                            <h5 class="card-title">Ata-Tech</h5>
+                            <p class="card-text">ATA Tech bietet maßgeschneiderte Lösungen im Bereich Handyverkauf und -reparatur. Die Website wurde mit dem Ziel entwickelt, sowohl eine ansprechende Produktpräsentation als auch eine benutzerfreundliche Navigation zu ermöglichen. Kunden können hier schnell die verfügbaren Produkte und Reparaturdienstleistungen einsehen und unkompliziert mit dem Unternehmen in Kontakt treten. </p>
+                            <a href="https://ata-tech.de/" class="btn btn-primary" target="_blank">Zur Webseite</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projekt 3 -->
+                <div class="col">
+                    <div class="card shadow-sm">
+                        <img src="images/sparenergy.png" class="card-img-top img-fluid" alt="SparEnergy">
+                        <div class="card-body">
+                            <h5 class="card-title">SparEnergy</h5>
+                            <p class="card-text">Mit einer klar strukturierten und informativen Webpräsenz unterstützt SparEnergy Unternehmen dabei, ihre Energiekosten zu senken. Die Website dient nicht nur als Plattform für Beratung und Wissensaustausch, sondern bietet auch direkten Zugang zu maßgeschneiderten Lösungen zur Optimierung des Energieverbrauchs. Ein benutzerfreundliches Interface stellt sicher, dass Kunden effizient mit Beratern kommunizieren und Lösungen schnell umsetzen können.</p>
+                            <a href="https://sparenergy.de/" class="btn btn-primary" target="_blank">Zur Webseite</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!-- Projekt 3 -->
-            <div class="col">
-                <div class="card shadow-sm">
-                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Projekt 3">
-                    <div class="card-body">
-                        <h5 class="card-title">SparEnergy</h5>
-                        <p class="card-text">Website für einen Energiekostenberater. Kunden können direkt mit dem Berater kommunizieren, um ihre Energiekosten zu optimieren.</p>
-                        <a href="https://sparenergy.de/" class="btn btn-primary" target="_blank">Zur Webseite</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Kontakt Sektion -->
-    <section id="contact" class="bg-dark text-white py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Kontakt</h2>
-            <p class="text-center mb-4">Haben Sie Interesse an einer Zusammenarbeit oder Fragen zu meinen Projekten? Kontaktieren Sie mich gerne!</p>
-            <form action="#" method="POST">
-                <div class="row">
-                    <div class="col-md-6 mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Ihr Name" required>
+        <!-- Kontakt Sektion -->
+        <section id="contact" class="bg-dark text-white py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Kontakt</h2>
+                <p class="text-center mb-4">Haben Sie Interesse an einer Zusammenarbeit oder Fragen zu meinen Projekten? Kontaktieren Sie mich gerne!</p>
+                <form action="#" method="POST">
+                    <div class="row">
+                        <div class="col-12 mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Ihr Name" required>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="email" class="form-label">E-Mail-Adresse</label>
+                            <input type="email" class="form-control" id="email" placeholder="Ihre E-Mail" required>
+                        </div>
+                        <div class="col-12 mb-3">
+                            <label for="message" class="form-label">Nachricht</label>
+                            <textarea class="form-control" id="message" rows="4" placeholder="Ihre Nachricht" required></textarea>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary">Absenden</button>
+                        </div>
                     </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="email" class="form-label">E-Mail-Adresse</label>
-                        <input type="email" class="form-control" id="email" placeholder="Ihre E-Mail" required>
-                    </div>
-                    <div class="col-12 mb-3">
-                        <label for="message" class="form-label">Nachricht</label>
-                        <textarea class="form-control" id="message" rows="4" placeholder="Ihre Nachricht" required></textarea>
-                    </div>
-                    <div class="col-12 text-center">
-                        <button type="submit" class="btn btn-primary">Absenden</button>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section>
+                </form>
+            </div>
+        </section>
+    </div>
 
     <!-- Bootstrap JS & Popper.js (optional für interaktive Elemente) -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybQx5LkS/2oXXpL7xJ5p5lYptTzz2fF2zxS/4bfVb/kp1V3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0gX2dkpPmVM5oNLMZyKj7znYpA3KHh6AqP39TnJgpyyVx10S" crossorigin="anonymous"></script>
 
 </body>
+
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 hafsaydin <a>|</a> <a href="#impressum" class="text-white">Impressum</a></p>
+</footer>
+
 </html>

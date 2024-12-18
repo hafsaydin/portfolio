@@ -15,48 +15,79 @@ body {
 
 /* Header */
 header {
-    background-color: #343a40;
+    background-color: #a2bba3;
     color: white;
-    padding: 20px 0;
-    text-align: center; /* Text im Header zentrieren */
+    padding: 50px ;
+    justify-content: space-between; /* Platz zwischen Logo, Text und Navigation */
+    flex-wrap: wrap; /* Umbrüche bei kleinen Bildschirmen ermöglichen */
 }
 
-header h1 {
-    font-size: 2.5rem;
-    margin: 20;
-    margin-bottom: 30px;
+header .logo {
+    max-width: 170px;  /* Logo-Größe anpassen */
+    height: auto;
 }
+
+
 
 header p {
     font-size: 1.2rem;
     margin: 0;
     margin-bottom: 80px;
+    padding: 5px;
+    text-align: center;
+    flex-grow: 1; /* Text nimmt verfügbaren Platz ein */
+    
+}
+header .nav {
+    display: flex;
+    justify-content: flex-end;  /* Navigation nach rechts ausrichten */
+    padding: 0;
+    margin: 0;
+}
+
+header .nav-item {
+    margin-left: 15px; /* Abstand zwischen den Navigationselementen */
 }
 
 nav ul {
     padding-left: 0;
     list-style: none;
+    display: flex;
+    justify-content: flex-end;
 }
 
 nav ul li {
     display: inline-block;
     margin-right: 20px;
+    transition: transform 0.3s ease; /* Übergangseffekt für transform */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    font-weight:bold;
+    
 }
 
 /* Hover-Effekt für das Navigationsmenü */
-nav ul li a:hover {
-    color: #007bff;
+nav ul li:hover {
+    transform: scale(1.1); /* Vergrößern beim Hover */
 }
+nav ul li a:hover {
+    color: #705b97;
+}
+
+body {
+    font-family: 'Inconsolata', monospace;
+}
+
+
+
 
 /* Über mich Sektion */
 #about {
-    padding: 60px 0;
+    padding: 200px 0;
     background-color: white;
     text-align: center;
 }
@@ -74,16 +105,38 @@ nav ul li a:hover {
     margin: 0 auto;
 }
 
+.about-container {
+    display: flex;
+    align-items: center; /* Vertikal zentrieren */
+    padding: 20px;
+}
+
+.about-text {
+    flex: 1; /* Text nimmt den restlichen Platz ein */
+    margin-right: 20px;
+}
+
+.about-image img {
+    width: 170px; /* Breite des Bildes */
+    height: 270px; /* Höhe des Bildes für eine senkrechte Ellipse */
+    object-fit: cover; /* Bild wird im Container skaliert, ohne das Seitenverhältnis zu verlieren */
+    border-radius: 50%; /* macht das Bild rund */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* optional, für einen leichten Schatteneffekt */
+    
+}
+
+
 /* Portfolio Sektion */
-#portfolio {
+#projekte {
     padding: 60px 0;
     background-color: #f9f9f9;
 }
 
-#portfolio h2 {
+#projekte h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
     text-align: center;
+ 
 }
 
 .card {
@@ -91,6 +144,7 @@ nav ul li a:hover {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
+    line-height: 1.3rem
 }
 
 .card:hover {
@@ -99,23 +153,28 @@ nav ul li a:hover {
 }
 
 .card-body {
-    padding: 20px;
+    padding: 30px;
 }
 
 .card-title {
     font-size: 1.5rem;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     color: #333;
 }
 
 .card-text {
-    font-size: 1rem;
+    font-size: rem;
     color: #666;
-    margin-bottom: 15px;
+    margin-bottom: 35px;
+}
+.card-img-top {
+    object-fit: cover; /* Bild wird skaliert, ohne das Seitenverhältnis zu verlieren */
+    height: 300px; /* Höhe des Bildes in der Karte */
 }
 
+
 .card .btn {
-    background-color: #007bff;
+    background-color: #a2bba3;
     border: none;
     padding: 10px 20px;
     color: white;
@@ -126,13 +185,15 @@ nav ul li a:hover {
 }
 
 .card .btn:hover {
-    background-color: #0056b3;
+    background-color: #a2bba3;
 }
 
 /* Abstände und Darstellung der Projekte */
 .row-cols-md-3 .col {
     margin-bottom: 30px;
 }
+
+
 
 /* Kontakt Sektion */
 #contact {
@@ -166,10 +227,19 @@ form {
     padding: 10px;
     font-size: 1rem;
     transition: border-color 0.3s;
+    max-width: 600px; /* Einheitliche Breite für alle Felder */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;!
 }
 
 .form-control:focus {
-    border-color: #007bff;
+    border-color: #a2bba3;
     box-shadow: 0 0 8px rgba(0, 123, 255, 0.25);
 }
 
@@ -178,7 +248,7 @@ textarea.form-control {
 }
 
 .btn-primary {
-    background-color: #007bff;
+    background-color: #a2bba3;
     border: none;
     color: white;
     font-size: 1.1rem;
@@ -188,13 +258,57 @@ textarea.form-control {
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
+    
 }
+
+
+footer {
+    padding: 30px;
+    text-align: center;
+    
+
+}
+
+footer p{
+    font-family: 'Inconsolata', monospace;
+}
+
+footer a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Inconsolata', monospace;
+}
+
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
 
 /* Reaktionsfähigkeit - Anpassungen für kleinere Bildschirme */
 
 /* Mobile Ansicht für das Header-Menü */
 @media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Auf kleineren Bildschirmen vertikal anordnen */
+        align-items: center;
+    }
+
+    header .logo {
+        margin-bottom: 10px;
+    }
+
+    header .nav {
+        justify-content: center;
+        margin-top: 10px;
+    }
+    header .col-4 {
+        max-width: 100%; /* Verhindert, dass die Spalten zu schmal werden */
+        margin-bottom: 10px;
+    }
     header h1 {
         font-size: 2rem;
     }
@@ -203,8 +317,13 @@ textarea.form-control {
         font-size: 1rem;
     }
 
+    header .nav ul {
+        display: flex;
+        flex-direction: column; /* Navigationselemente untereinander */
+    }
+
     nav ul li {
-        display: block;
+
         margin: 10px 0;
     }
 

@@ -4,9 +4,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mein Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ+KXn7omD/YV7kE+qI2z2+1c8s1jzVYswlYQ5mcj+j1VfndHiQ4D05xPYil" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css"> <!-- Dein eigenes CSS -->
 </head>
 <body>
-    <h1>Willkommen auf meinem Portfolio!</h1>
-    <p>Hier sind meine Projekte und Arbeiten.</p>
+
+    <!-- Sticky Header -->
+    <header class="bg-dark text-white sticky-top">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 text-center py-4">
+                    <h1>Max Mustermann</h1>
+                    <p>Webentwickler – Webseiten mit Fokus auf Benutzerfreundlichkeit und Sicherheit</p>
+                    <nav>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#about">Über mich</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#portfolio">Portfolio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#contact">Kontakt</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Über mich Sektion -->
+    <section id="about" class="container py-5">
+        <h2 class="text-center mb-4">Über mich</h2>
+        <p class="text-center">Ich bin Max Mustermann, ein Webentwickler mit einem starken Fokus auf Nutzerfreundlichkeit, Sicherheit und modernes Design. Mit einem Bachelorabschluss in Medieninformatik und viel Erfahrung in der Umsetzung komplexer Webprojekte, freue ich mich, meine Fähigkeiten in jedem neuen Projekt einzubringen.</p>
+    </section>
+
+    <!-- Projekte Sektion -->
+    <section id="portfolio" class="container py-5">
+        <h2 class="text-center mb-4">Projekte</h2>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <!-- Projekt 1 -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Projekt 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Internet-Sicherheit</h5>
+                        <p class="card-text">Bachelorarbeit: Prototypische Umsetzung und Redesign eines Webauftrittes für ein Forschungsinstitut der Westfälischen Hochschule für Internet-Sicherheit. Fokus auf WordPress und Sicherheit.</p>
+                        <a href="https://internet-sicherheit.de/" class="btn btn-primary" target="_blank">Zur Webseite</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Projekt 2 -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Projekt 2">
+                    <div class="card-body">
+                        <h5 class="card-title">ATA Tech</h5>
+                        <p class="card-text">Erstellung einer Website für einen Kunden im Bereich Handyverkauf und -reparatur. Inkl. Produktpräsentation und Kontaktformular für Dienstleistungen.</p>
+                        <a href="https://ata-tech.de/" class="btn btn-primary" target="_blank">Zur Webseite</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Projekt 3 -->
+            <div class="col">
+                <div class="card shadow-sm">
+                    <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="Projekt 3">
+                    <div class="card-body">
+                        <h5 class="card-title">SparEnergy</h5>
+                        <p class="card-text">Website für einen Energiekostenberater. Kunden können direkt mit dem Berater kommunizieren, um ihre Energiekosten zu optimieren.</p>
+                        <a href="https://sparenergy.de/" class="btn btn-primary" target="_blank">Zur Webseite</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kontakt Sektion -->
+    <section id="contact" class="bg-dark text-white py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Kontakt</h2>
+            <p class="text-center mb-4">Haben Sie Interesse an einer Zusammenarbeit oder Fragen zu meinen Projekten? Kontaktieren Sie mich gerne!</p>
+            <form action="#" method="POST">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Ihr Name" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="email" class="form-label">E-Mail-Adresse</label>
+                        <input type="email" class="form-control" id="email" placeholder="Ihre E-Mail" required>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <label for="message" class="form-label">Nachricht</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Ihre Nachricht" required></textarea>
+                    </div>
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary">Absenden</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS & Popper.js (optional für interaktive Elemente) -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz4fnFO9gybQx5LkS/2oXXpL7xJ5p5lYptTzz2fF2zxS/4bfVb/kp1V3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0gX2dkpPmVM5oNLMZyKj7znYpA3KHh6AqP39TnJgpyyVx10S" crossorigin="anonymous"></script>
+
 </body>
 </html>

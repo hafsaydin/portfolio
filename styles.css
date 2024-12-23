@@ -362,3 +362,29 @@ footer a:hover {
         margin: 10px 0;
     }
 }
+
+/* Positioniere den Pfeil unten rechts */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #a2bba3;
+    color: white;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 5px;
+    display: none; /* Anfangs unsichtbar */
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Zeige den Pfeil bei Scrollen */
+.back-to-top:hover {
+    background-color: #8fa78f;
+}
+
+/* Wenn der Pfeil angezeigt wird */
+.show {
+    display: block;
+}

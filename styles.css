@@ -1,6 +1,6 @@
 /* Allgemeine Seitenstile */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Inconsolata', monospace;
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
@@ -8,64 +8,47 @@ body {
 
 /* Container für die Sektionen */
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 15px;
+    overflow: visible;
 }
 
-/* Header */
-header {
+.header-text{
+    font-size: 20px;
+}
+
+.sticky-nav{
     background-color: #a2bba3;
-    color: white;
-    padding: 50px ;
-    justify-content: space-between; /* Platz zwischen Logo, Text und Navigation */
-    flex-wrap: wrap; /* Umbrüche bei kleinen Bildschirmen ermöglichen */
+    z-index: 1;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
-header .logo {
-    max-width: 170px;  /* Logo-Größe anpassen */
-    height: auto;
-}
-
-
-
-header p {
-    font-size: 1.2rem;
-    margin: 0;
-    margin-bottom: 80px;
-    padding: 5px;
-    text-align: center;
-    flex-grow: 1; /* Text nimmt verfügbaren Platz ein */
-    
-}
-header .nav {
-    display: flex;
-    justify-content: flex-end;  /* Navigation nach rechts ausrichten */
-    padding: 0;
-    margin: 0;
-}
-
-header .nav-item {
-    margin-left: 15px; /* Abstand zwischen den Navigationselementen */
-}
-
-nav ul {
+.sticky-nav .nav{
     padding-left: 0;
     list-style: none;
-    display: flex;
-    justify-content: flex-end;
+    margin: 0; /* Entfernt Standardabstand */
+    font-weight: bold;
+    color: white;
+
+}
+
+.sticky-nav .nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none; 
 }
 
 nav ul li {
-    display: inline-block;
-    margin-right: 20px;
+
     transition: transform 0.3s ease; /* Übergangseffekt für transform */
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight:bold;
     
 }
@@ -75,19 +58,14 @@ nav ul li:hover {
     transform: scale(1.1); /* Vergrößern beim Hover */
 }
 nav ul li a:hover {
-    color: #705b97;
-}
-
-body {
-    font-family: 'Inconsolata', monospace;
+    color: #705b97 !important;
 }
 
 
 
-
-/* Über mich Sektion */
+/* ___________________________________________________________________________Über mich Sektion */
 #about {
-    padding: 200px 0;
+    padding: 150px 150px;
     background-color: white;
     text-align: center;
 }
@@ -126,16 +104,18 @@ body {
 }
 
 
-/* Portfolio Sektion */
+/* ______________________________________________________________________________Portfolio Sektion */
 #projekte {
-    padding: 60px 0;
-    background-color: #f9f9f9;
+    margin-top: 80px;
+    padding: 10px 0 !important;
+    background-color: #f4f4f4;
 }
 
 #projekte h2 {
     font-size: 2.5rem;
     margin-bottom: 40px;
     text-align: center;
+    margin-bottom: 80px;
  
 }
 
@@ -144,7 +124,9 @@ body {
     border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
-    line-height: 1.3rem
+    line-height: 1.3rem;
+    margin-bottom: 80px;
+
 }
 
 .card:hover {
@@ -154,6 +136,7 @@ body {
 
 .card-body {
     padding: 30px;
+    height: 50vh;
 }
 
 .card-title {
@@ -172,7 +155,6 @@ body {
     height: 300px; /* Höhe des Bildes in der Karte */
 }
 
-
 .card .btn {
     background-color: #a2bba3;
     border: none;
@@ -185,7 +167,7 @@ body {
 }
 
 .card .btn:hover {
-    background-color: #a2bba3;
+    background-color: #705b97;
 }
 
 /* Abstände und Darstellung der Projekte */
@@ -194,8 +176,7 @@ body {
 }
 
 
-
-/* Kontakt Sektion */
+/* _____________________________________________________________________________Kontakt Sektion */
 #contact {
     padding: 60px 0;
     background-color: #343a40;
@@ -258,10 +239,11 @@ textarea.form-control {
 }
 
 .btn-primary:hover {
+    background-color: #705b97;
     
 }
 
-
+/* _________________________________________Footer*/
 footer {
     padding: 30px;
     text-align: center;
@@ -286,38 +268,36 @@ footer a:hover {
 }
 
 
-
-
 /* Reaktionsfähigkeit - Anpassungen für kleinere Bildschirme */
 
 /* Mobile Ansicht für das Header-Menü */
+
 @media (max-width: 768px) {
-    header {
+    .sticky-nav{
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+
+    .sticky-nav .container {
         flex-direction: column; /* Auf kleineren Bildschirmen vertikal anordnen */
         align-items: center;
     }
-
-    header .logo {
-        margin-bottom: 10px;
-    }
-
-    header .nav {
+    .sticky-nav .nav {
         justify-content: center;
-        margin-top: 10px;
-    }
-    header .col-4 {
-        max-width: 100%; /* Verhindert, dass die Spalten zu schmal werden */
-        margin-bottom: 10px;
-    }
-    header h1 {
-        font-size: 2rem;
+        width: 100%;
     }
 
-    header p {
+    body .logo {
+        margin-bottom: 10px;
+    }
+
+
+    body p {
         font-size: 1rem;
     }
 
-    header .nav ul {
+    .nav ul {
         display: flex;
         flex-direction: column; /* Navigationselemente untereinander */
     }
@@ -342,5 +322,43 @@ footer a:hover {
     .btn-primary {
         font-size: 1rem;
         padding: 10px 18px;
+    }
+}
+
+@media (max-width: 1400px) {
+    /* Container vertikal auf kleineren Bildschirmen */
+    .sticky-nav .container {
+        flex-direction: column; /* Auf kleineren Bildschirmen vertikal anordnen */
+        align-items: center; /* Zentrieren der Elemente */
+    }
+
+    /* Navigation soll mittig ausgerichtet werden */
+    .sticky-nav .nav {
+        justify-content: center; /* Zentriert die Navigation */
+        width: 100%;
+    }
+
+    /* Logo-Abstand nach unten */
+    body .logo {
+        margin-bottom: 10px;
+    }
+
+    /* Textgröße bei kleineren Bildschirmen */
+    body p {
+        font-size: 1rem;
+    }
+
+    /* Navigation untereinander anordnen */
+    .sticky-nav .nav ul {
+        display: flex;
+        flex-direction: column; /* Navigationselemente untereinander */
+        align-items: center; /* Zentriert die Navigation */
+        padding-left: 0; /* Entfernt Standard-Padding */
+        margin: 0; /* Entfernt Standard-Margin */
+    }
+
+    /* Abstand zwischen den Menüeinträgen */
+    nav ul li {
+        margin: 10px 0;
     }
 }
